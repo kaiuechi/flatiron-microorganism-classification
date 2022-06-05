@@ -3,7 +3,7 @@
 
 ## Overview
 
-The aim of this project is to create a classification model that can accurately identify types of microorganisms. Such a model is especially valuable in situtations where identification using DNA sequencing techniques would take too long. After training several models on data extracted from microscopic images, the best performing model was able to achieve 98.9% accuracy. This final model's performance is sufficient for application to identify microorganisms by genus, although it's performance could be improved with more accurate and balanced data.
+The aim of this project is to create a classification model that can accurately identify types of microorganisms. Such a model is especially valuable in situations where identification using DNA sequencing techniques would take too long. After training several models on data extracted from microscopic images, the best performing model was able to achieve 98.9% accuracy. This final model's performance is sufficient for application to identify microorganisms by genus, although it's performance could be improved with more accurate and balanced data.
 
 
 ## Business Problem
@@ -61,7 +61,7 @@ Ultimately, the `XGBoost` model with custom parameters performs best, so it beco
 ## Findings
 ### Predictive Ability
 The XGBoost model with custom parameters performed the best out of all the models, making it the final model.
-This final model posesses an accuracy of `98.9%`, making it well suited to predicting the 10 categories in this data set. 
+This final model possesses an accuracy of `98.9%`, making it well suited to predicting the 10 categories in this data set. 
 
 For the categories `Volvox`, `Yeast`, `Raizopus`, `Protozoa`, `Penicillium`, and `Diatom`, the model correctly identified all instances of these categories.
 
@@ -94,7 +94,7 @@ This project arrives at three immediate recommendations in order to best utilize
 The final model's predictive ability is sufficient for applications requiring rapid identification of microorganisms between the model's 10 categories. An example of this would be determining antibiotic resistance for patients in septic shock as a result of a bacterial infection.
 
 
-If the model is either available locally or hosted as a webapp, a technician would be able to recieve results immediately after the extracted image data is sent.
+If the model is either available locally or hosted as a webapp, a technician would be able to receive results immediately after the extracted image data is sent.
 
 An important caveat is that the model is less effective at predicting Spirogyra compared to other genera. The graph below visualizes this difference. It is important to keep this limitation in mind, as other methods of identification may be preferable in situations where detecting microorganisms of the Spirogyra genus is critical.
 
@@ -107,9 +107,9 @@ As the graphs below show, the troubled category `Spirogyra` is also the category
 
 ![graph4](./images/r2.png)
 
-### Increase Accuracy of Key Feature Collection
+### Collect Key Features With Increased Accuracy
 
-Certain features of the data are more helpful in determining the type of microorganism than others. The two features that are most significant to the final model are `ConvexArea` and `raddi`.
+Certain features of the data are more helpful in determining the type of microorganism than others. As shown in the graph below, the two features that are most significant to the final model are `ConvexArea` and `raddi`.
 
 In the current dataset, `ConvexArea` is recorded to three decimal places of accuracy while `raddi` is recorded to only two.
 If these features are recorded to a greater degree of detail, the model's predictive ability may be improved.
@@ -117,7 +117,7 @@ If these features are recorded to a greater degree of detail, the model's predic
 ![graph5](./images/r3.png)
 
 ### Next steps
-**Collect Data to Expand Model Application**
+**Collect Data to Expand Model Categories**
 
 By collecting data regarding additional types of microorganisms, it may be possible to detect a wider variety of categories using machine learning. Similarly, if more detailed data is collected, it may be possible to identify individual species of microorganisms within the existing categories.
 
